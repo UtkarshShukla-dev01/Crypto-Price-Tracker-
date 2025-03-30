@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Price Tracker</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <a href="/" class="home-btn">Home</a>
+
+    <h1 >Crypto Price Watch</h1>
+    <form action="/" method="POST">
+        <label for="crypto">Enter Cryptocurrency Name:</label>
+        <input type="text" id="crypto" name="crypto" required>
+        <button type="submit">Get Price</button>
+    </form>
+    <% if (crypto && price) { %>
+        <h2 class="h2">
+            Price of <%= crypto.toUpperCase() %>: $<%= price %> 
+            <% if (change !== "N/A") { %>
+                <% if (change > 0) { %>
+                    <span class="positive">(+<%= change %>% 🔼)</span>
+                <% } else { %>
+                    <span class="negative">(<%= change %>% 🔽)</span>
+                <% } %>
+            <% } %>
+        </h2>
+        <a href="/">Check another currency</a>
+    <% } %>
+
+
+    <h2 id="title"> </h2>
+    <ul>
+        <% trending.forEach(coin => { %>
+            <li>
+                <img src="<%= coin.image %>" alt="<%= coin.name %>" width="30">
+                <strong><%= coin.name %> (<%= coin.symbol %>)</strong> - Price: <%= coin.price %> BTC | Change: <%= coin.change %>% 🔥
+                <% if (coin.change > 0) { %> 🔼 <% } else { %> 🔽 <% } %>
+            </li>
+        <% }); %>
+    </ul>    
+    <footer>
+        <p>© 2025 Crypto Tracker | Built with UTKARSH</p>
+    </footer>
+    <script>
+        const text = " Trending Cryptos "; // Text to display
+        let i = 0;
+
+        function typeWriter() {
+            if (i < text.length) {
+                document.getElementById("title").innerHTML += text.charAt(i); // Add each character
+                i++;
+                setTimeout(typeWriter, 100); // Delay between characters
+            } else {
+                // Wait for 2 seconds after finishing and reset
+                setTimeout(() => {
+                    document.getElementById("title").innerHTML = ""; // Clear the text
+                    i = 0; // Reset counter
+                    typeWriter(); // Start typing again
+                }, 2000);
+            }
+        }
+
+        // Trigger the effect when the page loads
+        window.onload = typeWriter;
+    </script>
+
+
+</body>
+</html>

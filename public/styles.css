@@ -1,0 +1,195 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Heading styling */
+h1 {
+    margin-top: 20px;
+    color: #fff;
+}
+
+/* Form container */
+form {
+    background-color: #e0e5ec;
+    padding: 20px;
+    margin: 20px auto;
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: 8px 8px 12px #a3b1c6, -8px -8px 12px #ffffff;
+    transition: transform 0.2s;
+}
+
+form:hover {
+    transform: scale(1.03);
+}
+
+/* Input field styling */
+input {
+    width: 80%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Submit button */
+button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Crypto price result */
+h2 {
+    margin-top: 20px;
+    color: #fff;
+}
+
+/* Trending cryptos section */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+/* Each crypto item */
+li {
+    background-color: #e0e5ec;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 8px 8px 12px #a3b1c6, -8px -8px 12px #ffffff;
+    text-align: left;
+    transition: transform 0.2s;
+}
+
+li:hover {
+    transform: scale(1.03);
+}
+
+/* Positive change - green */
+.positive {
+    color: #4caf50;
+    font-weight: bold;
+}
+
+/* Negative change - red */
+.negative {
+    color: #f44336;
+    font-weight: bold;
+}
+
+/* Link styling */
+a {
+    text-decoration: none;
+    color: #007bff;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Footer styling */
+footer {
+    margin-top: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    form {
+        width: 90%;
+    }
+
+    li {
+        width: 100%;
+    }
+}
+
+/* Coin image styling */
+img {
+    vertical-align: middle;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    margin-right: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    transition: transform 0.3s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+}
+form, li {
+    box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.9), -8px -8px 16px rgba(0, 0, 0, 0.6);
+}
+/* Footer styling */
+footer {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: transparent;
+    color: #fff;
+    padding: 5px 10px;
+    text-align: right;
+    font-size: 14px;
+}
+
+/* Heading styling */
+h1 {
+    margin-top: 20px;
+    color: #fff;
+    font-size: 36px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, #ff4e50, #fc913a, #f9d423);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.3);
+    animation: glow 1.5s infinite alternate;
+}
+
+/* Glow animation */
+@keyframes glow {
+    0% {
+        text-shadow: 2px 2px 20px rgba(255, 78, 80, 0.8);
+    }
+    100% {
+        text-shadow: 2px 2px 30px rgba(252, 145, 58, 0.9);
+    }
+}
+
+/* Home button styling */
+/* Home button styling */
+.home-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: rgb(255, 255, 255); /* Adjust color as needed */
+    text-decoration: none;
+    font-size: 16px;
+}
